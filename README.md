@@ -1,11 +1,11 @@
 # cognito-node-api
 
-Capture google maps search information
+aws-cognito authentication
 
 ### Prerequisites
 
 ```
-* Nodejs
+Nodejs
 ```
 
 ### Installing
