@@ -1,0 +1,23 @@
+{
+  "name": "cognito-node-api",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "thiago jose de almeida simao",
+  "dependencies": {
+    "amazon-cognito-identity-js": "^3.0.3",
+    "amazon-cognito-identity-js-node": "0.0.3",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "cognito-express": "^2.0.12",
+    "error-factory": "^0.1.6",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "morgan": "^1.9.1"
+  }
+}
