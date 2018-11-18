@@ -39,15 +39,15 @@ Get the user pool id and client application id registered in the userpool of the
   ClientId:   <CLIENT_ID_COGNITO>
 ```
 
-### Start api
+## Start
 
 ```
 npm start
 ```
 
-# Routes
+## Routes
 
-### POST : /user/create
+#### POST : /user/create
 
 _Create user_
 
@@ -60,7 +60,7 @@ Model : {
 
 ```
 
-### POST : /user/confirm
+#### POST : /user/confirm
 
 _Confirme user_
 
@@ -72,7 +72,7 @@ Model : {
 
 ```
 
-### POST : /user/resend
+#### POST : /user/resend
 
 _Resend Code to User Email_
 
@@ -83,7 +83,7 @@ Model : {
 
 ```
 
-### POST : /user/signin
+#### POST : /user/signin
 
 _Signin for aws-cognito_
 
@@ -95,7 +95,7 @@ Model : {
 
 ```
 
-### POST : /user/signout
+#### POST : /user/signout
 
 _Signout for aws-cognito_
 
@@ -106,7 +106,7 @@ Model : {
 
 ```
 
-### POST : /user/forgot-password
+#### POST : /user/forgot-password
 
 _Resend the code to retrieve the password_
 
@@ -116,7 +116,7 @@ Model : {
 }
 ```
 
-### POST : /user/forgot-password-confirm
+#### POST : /user/forgot-password-confirm
 
 _Resend the code to retrieve the password_
 
