@@ -1,6 +1,7 @@
-# cognito-node-api <img src="./docs/img/logo_nodejs.png" width="30" height="30" style="float: right;" /> <img src="./docs/img/logo_aws_cognito.jpg" width="30" height="30" style="float: right;"/>
+# cognito-node-api
 
 aws-cognito authentication
+<img src="./docs/img/logo_nodejs.png" width="30" height="30" style="float: right;" /> <img src="./docs/img/logo_aws_cognito.jpg" width="30" height="30" style="float: right;"/>
 
 ### Prerequisites
 
