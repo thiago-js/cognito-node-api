@@ -2,7 +2,7 @@
 
 aws-cognito authentication
 
-<div style="float:right; margin:0 10px 10px 0" markdown="1">
+<div style="float:right;" markdown="1">
     <img src="./docs/img/logo_nodejs.png" width="30" height="30" style="float: right" /> <img src="./docs/img/logo_aws_cognito.jpg" width="30" height="30" style="float: right"/>
 </div>
 
