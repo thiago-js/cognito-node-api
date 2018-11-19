@@ -2,8 +2,14 @@
 
 aws-cognito authentication
 
-<div style="float:right;" markdown="1">
-    <img src="./docs/img/logo_nodejs.png" width="30" height="30" style="float: right" /> <img src="./docs/img/logo_aws_cognito.jpg" width="30" height="30" style="float: right"/>
+<div style="widht: 100%;">
+    <div style="float:left">
+        aws-cognito authentication
+    </div>
+    <div style="float:rigtht">
+        <img src="./docs/img/logo_nodejs.png" width="30" height="30" style="float: right" /> <img src="./docs/img/logo_aws_cognito.jpg" width="30" height="30" style="float: right"/>
+    </div>
+    
 </div>
 
 ### Prerequisites
