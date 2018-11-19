@@ -1,6 +1,7 @@
 # cognito-node-api
 
 aws-cognito authentication
+<img src="./docs/img/logo_nodejs.png" width="30" height="30" /> <img src="./docs/img/logo_aws_cognito.jpg" width="30" height="30" />
 
 ### Prerequisites
 
@@ -26,6 +27,12 @@ npm install
 ```
 
 ## Config aws-cognito
+
+When creating the userpool define several login options, and also set the email and phone fields as required, as shown below
+
+![Image cognito attributes](./docs/img/model_aws_cognito.png)
+
+## Config node-api
 
 Get the user pool id and client application id registered in the userpool of the cognito
 
