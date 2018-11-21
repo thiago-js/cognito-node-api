@@ -97,7 +97,7 @@ _Confirme user_
 ```
 Model : {
   "username": "teste@gmail.com",
-  "code": "123456",
+  "code    ": "123456",
   "type"    : "UserPool2" -- optional (if you do not pass the parameter in the request, we will use the first configuration defined in the config)
 }
 
@@ -123,7 +123,7 @@ _Signin for aws-cognito_
 Model : {
   "username" : "teste@gmail.com",
   "password" : "123456",
-  "type"    : "UserPool2" -- optional (if you do not pass the parameter in the request, we will use the first configuration defined in the config)
+  "type"     : "UserPool2" -- optional (if you do not pass the parameter in the request, we will use the first configuration defined in the config)
 }
 
 ```
@@ -135,7 +135,7 @@ _Signout for aws-cognito_
 ```
 Model : {
   "username" : "teste@gmail.com",
-  "type"    : "UserPool2" -- optional (if you do not pass the parameter in the request, we will use the first configuration defined in the config)
+  "type"     : "UserPool2" -- optional (if you do not pass the parameter in the request, we will use the first configuration defined in the config)
 }
 
 ```
@@ -147,7 +147,7 @@ _Resend the code to retrieve the password_
 ```
 Model : {
   "username" : "teste@gmail.com",
-  "type"    : "UserPool2" -- optional (if you do not pass the parameter in the request, we will use the first configuration defined in the config)
+  "type"     : "UserPool2" -- optional (if you do not pass the parameter in the request, we will use the first configuration defined in the config)
 }
 ```
 
@@ -157,10 +157,10 @@ _Resend the code to retrieve the password_
 
 ```
 Model : {
-  "username" : "teste@gmail.com",
-  "code"     : "123456",
+  "username"   : "teste@gmail.com",
+  "code"       : "123456",
   "newPassword":"159357",
-  "type"    : "UserPool2" -- optional (if you do not pass the parameter in the request, we will use the first configuration defined in the config)
+  "type"       : "UserPool2" -- optional (if you do not pass the parameter in the request, we will use the first configuration defined in the config)
 }
 ```
 
