@@ -1,6 +1,6 @@
 const EventEmitter = require("events");
 const factory = require("error-factory");
-const { CognitoUser } = require("../../../../config/aws/aws-cognito");
+const { UserPool } = require("../../../../config/aws/aws-cognito");
 
 const mediator = new EventEmitter();
 
@@ -17,7 +17,8 @@ const emitSuccess = result =>
 
 const emitError = err => mediator.emit("forgot-password-user.Error", err);
 
-const forgotPassword = username => {
+const forgotPassword = (username, type) => {
+  const { CognitoUser } = UserPool(type);
   const Cognito = CognitoUser(username.replace("@", "_"));
 
   Cognito.forgotPassword({
@@ -28,9 +29,9 @@ const forgotPassword = username => {
   });
 };
 
-module.exports = ({ username }) => {
+module.exports = ({ username, type }) => {
   ValidationUsername(username)
-    .then(() => forgotPassword(username))
+    .then(() => forgotPassword(username, type))
     .catch(_ValidationUsername, emitValidationUsername);
 
   return mediator;

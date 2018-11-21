@@ -1,11 +1,11 @@
 const config = {
   port: 3000,
   Pools: {
-    "easybarber-admin": {
+    default: {
       UserPoolId: "USER_POLL_ID_COGNITO",
       ClientId: "CLIENT_ID_COGNITO"
     },
-    "easybarber-api": {
+    userPoolTest: {
       UserPoolId: "USER_POLL_ID_COGNITO",
       ClientId: "CLIENT_ID_COGNITO"
     }

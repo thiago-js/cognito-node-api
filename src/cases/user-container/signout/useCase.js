@@ -1,6 +1,6 @@
 const EventEmitter = require("events");
 const factory = require("error-factory");
-const { CognitoUser } = require("../../../../config/aws/aws-cognito");
+const { UserPool } = require("../../../../config/aws/aws-cognito");
 
 const mediator = new EventEmitter();
 
@@ -14,9 +14,8 @@ const emitValidationUsername = err =>
 
 const emitSuccess = result => mediator.emit("logout-user.Success", result);
 
-const emitError = err => mediator.emit("logout-user.Error", err);
-
 const signOut = username => {
+  const { CognitoUser } = UserPool(type);
   const Cognito = CognitoUser(username.replace("@", "_"));
 
   Cognito.signOut();

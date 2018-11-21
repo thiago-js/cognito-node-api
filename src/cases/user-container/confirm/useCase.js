@@ -1,6 +1,6 @@
 const EventEmitter = require("events");
 const factory = require("error-factory");
-const { CognitoUser } = require("../../../../config/aws/aws-cognito");
+const { UserPool } = require("../../../../config/aws/aws-cognito");
 
 const mediator = new EventEmitter();
 
@@ -22,7 +22,9 @@ const emitValidationCode = err =>
 const emitSuccess = result => mediator.emit("confirm-user.Success", result);
 const emitError = err => mediator.emit("confirm-user.Error", err);
 
-const ConfirmCode = (username, code) => {
+const ConfirmCode = (username, code, type) => {
+  const { CognitoUser } = UserPool(type);
+
   const Cognito = CognitoUser(username.replace("@", "_"));
 
   Cognito.confirmRegistration(code, true, (err, result) =>
@@ -32,10 +34,10 @@ const ConfirmCode = (username, code) => {
   );
 };
 
-module.exports = ({ username, code }) => {
+module.exports = ({ username, code, type }) => {
   ValidationUsername(username)
     .then(() => ValidationCode(code))
-    .then(() => ConfirmCode(username, code))
+    .then(() => ConfirmCode(username, code, type))
     .catch(_ValidationUsername, emitValidationUsername)
     .catch(_ValidationCode, emitValidationCode);
 
