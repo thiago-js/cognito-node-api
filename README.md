@@ -3,7 +3,7 @@
 aws-cognito authentication
 
 <img src="./docs/img/logo_aws_cognito.jpg" width="30" height="30" style="float: right"/> <img src="./docs/img/logo_nodejs.png" width="30" height="30" style="float: right" />
- 
+
 ### Prerequisites
 
 ```
@@ -37,14 +37,35 @@ When creating the userpool define several login options, and also set the email 
 
 Get the user pool id and client application id registered in the userpool of the cognito
 
-- path config file
-
 ```
   cognito-node-api/config/conf.js
 
-  -- conf.js
-  UserPoolId: <USER_POLL_ID_COGNITO>,
-  ClientId:   <CLIENT_ID_COGNITO>
+  one userpool
+
+  Pools: {
+    default: {
+      UserPoolId: "USER_POLL_ID_COGNITO",
+      ClientId: "CLIENT_ID_COGNITO"
+    }
+  }
+
+  multiples userpools
+
+  Pools: {
+    UserPool1: {
+      UserPoolId: "USER_POLL_ID_COGNITO",
+      ClientId: "CLIENT_ID_COGNITO"
+    },
+    UserPool2: {
+      UserPoolId: "USER_POLL_ID_COGNITO",
+      ClientId: "CLIENT_ID_COGNITO"
+    },
+    UserPool3: {
+      UserPoolId: "USER_POLL_ID_COGNITO",
+      ClientId: "CLIENT_ID_COGNITO"
+    }
+  }
+
 ```
 
 ## Start
@@ -63,7 +84,8 @@ _Create user_
 Model : {
   "username": "teste@gmail.com",
   "password": "123456",
-  "phone"   : "+5511912365478"
+  "phone"   : "+5511912365478",
+  "type"    : "UserPool2" -- optional (if you do not pass the parameter in the request, we will use the first configuration defined in the config)
 }
 
 ```
@@ -75,7 +97,8 @@ _Confirme user_
 ```
 Model : {
   "username": "teste@gmail.com",
-  "code": "123456"
+  "code    ": "123456",
+  "type"    : "UserPool2" -- optional (if you do not pass the parameter in the request, we will use the first configuration defined in the config)
 }
 
 ```
@@ -86,7 +109,8 @@ _Resend Code to User Email_
 
 ```
 Model : {
-  "username": "teste@gmail.com"
+  "username": "teste@gmail.com",
+  "type"    : "UserPool2" -- optional (if you do not pass the parameter in the request, we will use the first configuration defined in the config)
 }
 
 ```
@@ -98,7 +122,8 @@ _Signin for aws-cognito_
 ```
 Model : {
   "username" : "teste@gmail.com",
-  "password" : "123456"
+  "password" : "123456",
+  "type"     : "UserPool2" -- optional (if you do not pass the parameter in the request, we will use the first configuration defined in the config)
 }
 
 ```
@@ -109,7 +134,8 @@ _Signout for aws-cognito_
 
 ```
 Model : {
-  "username" : "teste@gmail.com"
+  "username" : "teste@gmail.com",
+  "type"     : "UserPool2" -- optional (if you do not pass the parameter in the request, we will use the first configuration defined in the config)
 }
 
 ```
@@ -120,7 +146,8 @@ _Resend the code to retrieve the password_
 
 ```
 Model : {
-  "username" : "teste@gmail.com"
+  "username" : "teste@gmail.com",
+  "type"     : "UserPool2" -- optional (if you do not pass the parameter in the request, we will use the first configuration defined in the config)
 }
 ```
 
@@ -130,9 +157,10 @@ _Resend the code to retrieve the password_
 
 ```
 Model : {
-  "username" : "teste@gmail.com",
-  "code"     : "123456",
-  "newPassword":"159357"
+  "username"   : "teste@gmail.com",
+  "code"       : "123456",
+  "newPassword":"159357",
+  "type"       : "UserPool2" -- optional (if you do not pass the parameter in the request, we will use the first configuration defined in the config)
 }
 ```
 
