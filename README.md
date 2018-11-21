@@ -66,8 +66,6 @@ Get the user pool id and client application id registered in the userpool of the
     }
   }
 
-  UserPoolId: <USER_POLL_ID_COGNITO>,
-  ClientId:   <CLIENT_ID_COGNITO>
 ```
 
 ## Start
