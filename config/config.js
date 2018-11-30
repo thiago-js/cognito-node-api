@@ -1,13 +1,9 @@
 const config = {
-  port: 3000,
+  port: process.env.PORT || 5001,
   Pools: {
-    default: {
-      UserPoolId: "USER_POLL_ID_COGNITO",
-      ClientId: "CLIENT_ID_COGNITO"
-    },
-    userPoolTest: {
-      UserPoolId: "USER_POLL_ID_COGNITO",
-      ClientId: "CLIENT_ID_COGNITO"
+    customers: {
+      UserPoolId: "us-east-1_dzPkMpUJM",
+      ClientId: "6ibatks17tj0i20fhml6nclmda"
     }
   }
 };
