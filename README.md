@@ -80,7 +80,7 @@ npm start
 
 ## Routes
 
-![Image cognito attributes](./docs/img/complain.png) if you do not pass field type with parameter in the request, we will use the first configuration defined in the config file
+![Image cognito attributes](./docs/img/complain.png) " if you do not pass field type with parameter in the request, we will use the first configuration defined in the config file " ![Image cognito attributes](./docs/img/complain.png)
 
 #### POST : /user/create
 
