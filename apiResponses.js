@@ -31,6 +31,7 @@ const created = res => _ => {
   }
 };
 
+
 module.exports = {
   ok,
   notFound,

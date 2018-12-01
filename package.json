@@ -13,7 +13,7 @@
     "amazon-cognito-identity-js-node": "0.0.3",
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
-    "cognito-express": "^2.0.12",
+    "cognito-express": "^2.0.14",
     "error-factory": "^0.1.6",
     "express": "^4.16.3"
   },

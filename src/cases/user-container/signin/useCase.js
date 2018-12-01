@@ -26,8 +26,10 @@ const emitSuccess = result =>
   mediator.emit("authenticate-user.Success", result);
 const emitError = err => mediator.emit("authenticate-user.Error", err);
 
-const signIn = (username, password) => {
-  const { CognitoUser } = UserPool(type);
+const signIn = (username, password, type) => {
+  const {
+    CognitoUser
+  } = UserPool(type);
   const Cognito = CognitoUser(username.replace("@", "_"));
 
   const auth = AuthenticationDetails(username, password);
@@ -42,10 +44,14 @@ const signIn = (username, password) => {
   });
 };
 
-module.exports = ({ username, password }) => {
+module.exports = ({
+  username,
+  password,
+  type
+}) => {
   ValidationUsername(username)
     .then(() => ValidationPassword(password))
-    .then(() => signIn(username, password))
+    .then(() => signIn(username, password, type))
     .catch(_ValidationUsername, emitValidationUsername)
     .catch(_ValidationPassword, emitValidationPassword);
 

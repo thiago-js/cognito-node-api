@@ -5,26 +5,57 @@ const signIn = require("./signin");
 const signOut = require("./signout");
 const forgotPassword = require("./forgot-password");
 const forgotPasswordConfirm = require("./forgot-password-confirm");
+const validateToken = require("./validate");
+const refreshToken = require("./refresh-token");
 
-const { Router } = require("express");
 
-module.exports = ({ apiResponses }) => {
+const {
+  Router
+} = require("express");
+
+module.exports = ({
+  apiResponses
+}) => {
   const router = Router();
 
-  router.post("/user/create", createUser({ apiResponses }));
-  router.post("/user/confirm", confirmUser({ apiResponses }));
-  router.post("/user/resend", resendUser({ apiResponses }));
-  router.post("/user/signIn", signIn({ apiResponses }));
-  router.post("/user/signOut", signOut({ apiResponses }));
-  router.post("/user/forgot-password", forgotPassword({ apiResponses }));
-
+  router.post("/user/create", createUser({
+    apiResponses
+  }));
+  router.post("/user/confirm", confirmUser({
+    apiResponses
+  }));
+  router.post("/user/resend", resendUser({
+    apiResponses
+  }));
+  router.post("/user/signIn", signIn({
+    apiResponses
+  }));
+  router.post("/user/signOut", signOut({
+    apiResponses
+  }));
+  router.post("/user/forgot-password", forgotPassword({
+    apiResponses
+  }));
   router.post(
     "/user/forgot-password-confirm",
-    forgotPasswordConfirm({ apiResponses })
+    forgotPasswordConfirm({
+      apiResponses
+    })
   );
+  router.post("/user/validate", validateToken({
+    apiResponses
+  }));
+  //refreshSession
+  router.post("/user/refresh-token", refreshToken({
+    apiResponses
+  }));
+
+
 
   router.get("api/user/private", (req, res) => {
-    res.json({ message: "Esta authenticado" });
+    res.json({
+      message: "Esta authenticado"
+    });
   });
 
   return router;

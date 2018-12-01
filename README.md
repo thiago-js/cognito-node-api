@@ -10,6 +10,8 @@ aws-cognito authentication
 Nodejs
 ```
 
+
+
 ### Installing
 
 Open the terminal and execute the commands
@@ -27,11 +29,15 @@ cd cognito-node-api
 npm install
 ```
 
+
+
 ## Config aws-cognito
 
 When creating the userpool define several login options, and also set the email and phone fields as required, as shown below
 
 ![Image cognito attributes](./docs/img/model_aws_cognito.png)
+
+
 
 ## Config node-api
 
@@ -44,6 +50,7 @@ Get the user pool id and client application id registered in the userpool of the
 
   Pools: {
     default: {
+      Region: "USER_POLL_REGION",
       UserPoolId: "USER_POLL_ID_COGNITO",
       ClientId: "CLIENT_ID_COGNITO"
     }
@@ -53,14 +60,17 @@ Get the user pool id and client application id registered in the userpool of the
 
   Pools: {
     UserPool1: {
+      Region: "USER_POLL_REGION",
       UserPoolId: "USER_POLL_ID_COGNITO",
       ClientId: "CLIENT_ID_COGNITO"
     },
     UserPool2: {
+      Region: "USER_POLL_REGION",
       UserPoolId: "USER_POLL_ID_COGNITO",
       ClientId: "CLIENT_ID_COGNITO"
     },
     UserPool3: {
+      Region: "USER_POLL_REGION",
       UserPoolId: "USER_POLL_ID_COGNITO",
       ClientId: "CLIENT_ID_COGNITO"
     }
@@ -68,11 +78,15 @@ Get the user pool id and client application id registered in the userpool of the
 
 ```
 
+
+
 ## Start
 
 ```
 npm start
 ```
+
+
 
 ## Routes
 
@@ -90,6 +104,8 @@ Model : {
 
 ```
 
+
+
 #### POST : /user/confirm
 
 _Confirme user_
@@ -103,6 +119,8 @@ Model : {
 
 ```
 
+
+
 #### POST : /user/resend
 
 _Resend Code to User Email_
@@ -114,6 +132,8 @@ Model : {
 }
 
 ```
+
+
 
 #### POST : /user/signin
 
@@ -128,6 +148,8 @@ Model : {
 
 ```
 
+
+
 #### POST : /user/signout
 
 _Signout for aws-cognito_
@@ -140,6 +162,8 @@ Model : {
 
 ```
 
+
+
 #### POST : /user/forgot-password
 
 _Resend the code to retrieve the password_
@@ -150,6 +174,8 @@ Model : {
   "type"     : "UserPool2" -- optional (if you do not pass the parameter in the request, we will use the first configuration defined in the config)
 }
 ```
+
+
 
 #### POST : /user/forgot-password-confirm
 
@@ -164,13 +190,46 @@ Model : {
 }
 ```
 
+
+
+#### POST : /user/refresh-session
+
+_Refreshes User Session_
+
+```
+Model : {
+  "username"   		: "teste@gmail.com",
+  "refreshToken"    : "eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYW...",
+  "type"       		: "UserPool2" -- optional (if you do not pass the parameter in the request, we will use the first configuration defined in the config file)
+}
+```
+
+
+
+#### POST : /user/validate
+
+_Validates User Session_
+
+```
+Model : {
+  "accessToken"    : "eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYW...",
+  "type"       		: "UserPool2" -- optional (if you do not pass the parameter in the request, we will use the first configuration defined in the config file)
+}
+```
+
+
+
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [(aws cognito node api)](https://github.com/your/project/tags).
 
+
+
 ## Author
 
 - **Thiago jose de almeida simao** - [Git](https://github.com/thiagosimaome)
+
+
 
 ## Acknowledgments
 
