@@ -199,8 +199,8 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Contributors
 
-- **thiago-js** - [Git](https://github.com/thiago-js)
-- **erick-martins** - [Git](https://github.com/erick-martins)
+- [**thiago-js**](https://github.com/thiago-js)
+- [**erick-martins**](https://github.com/erick-martins)
 
 ## Acknowledgments
 
