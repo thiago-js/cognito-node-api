@@ -50,6 +50,7 @@ Get the user pool id and client application id registered in the userpool of the
 
   Pools: {
     default: {
+      Region: "USER_POLL_REGION",
       UserPoolId: "USER_POLL_ID_COGNITO",
       ClientId: "CLIENT_ID_COGNITO"
     }
@@ -59,14 +60,17 @@ Get the user pool id and client application id registered in the userpool of the
 
   Pools: {
     UserPool1: {
+      Region: "USER_POLL_REGION",
       UserPoolId: "USER_POLL_ID_COGNITO",
       ClientId: "CLIENT_ID_COGNITO"
     },
     UserPool2: {
+      Region: "USER_POLL_REGION",
       UserPoolId: "USER_POLL_ID_COGNITO",
       ClientId: "CLIENT_ID_COGNITO"
     },
     UserPool3: {
+      Region: "USER_POLL_REGION",
       UserPoolId: "USER_POLL_ID_COGNITO",
       ClientId: "CLIENT_ID_COGNITO"
     }

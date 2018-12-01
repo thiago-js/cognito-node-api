@@ -1,10 +1,10 @@
 const config = {
   port: process.env.PORT || 5001,
   Pools: {
-    customers: {
-      Region: "us-east-1",
-      UserPoolId: "us-east-1_dzPkMpUJM",
-      ClientId: "6ibatks17tj0i20fhml6nclmda"
+    default: {
+      Region: "USER_POLL_REGION",
+      UserPoolId: "USER_POLL_ID_COGNITO",
+      ClientId: "CLIENT_ID_COGNITO"
     }
   }
 };
