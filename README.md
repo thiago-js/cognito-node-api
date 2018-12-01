@@ -91,7 +91,7 @@ Model : {
   "username": "teste@gmail.com",
   "password": "123456",
   "phone"   : "+5511912365478",
-  "type"    : "UserPool2" -- optional
+  "type"    : "UserPool2"
 }
 
 ```
@@ -104,7 +104,7 @@ _Confirme user_
 Model : {
   "username": "teste@gmail.com",
   "code    ": "123456",
-  "type"    : "UserPool2" -- optional
+  "type"    : "UserPool2"
 }
 
 ```
@@ -127,9 +127,9 @@ _Signin for aws-cognito_
 
 ```
 Model : {
-  "username" : "teste@gmail.com",
-  "password" : "123456",
-  "type"     : "UserPool2"
+  "username": "teste@gmail.com",
+  "password": "123456",
+  "type"    : "UserPool2"
 }
 
 ```
@@ -140,8 +140,8 @@ _Signout for aws-cognito_
 
 ```
 Model : {
-  "username" : "teste@gmail.com",
-  "type"     : "UserPool2"
+  "username": "teste@gmail.com",
+  "type"    : "UserPool2"
 }
 
 ```
@@ -152,8 +152,8 @@ _Resend the code to retrieve the password_
 
 ```
 Model : {
-  "username" : "teste@gmail.com",
-  "type"     : "UserPool2"
+  "username": "teste@gmail.com",
+  "type"    : "UserPool2"
 }
 ```
 
@@ -165,7 +165,7 @@ _Resend the code to retrieve the password_
 Model : {
   "username"   : "teste@gmail.com",
   "code"       : "123456",
-  "newPassword":"159357",
+  "newPassword": "159357",
   "type"       : "UserPool2"
 }
 ```
@@ -176,9 +176,9 @@ _Refreshes User Session_
 
 ```
 Model : {
-  "username"   		: "teste@gmail.com",
-  "refreshToken"    : "eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYW...",
-  "type"       		: "UserPool2"
+  "username"   	: "teste@gmail.com",
+  "refreshToken": "eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYW...",
+  "type"       	: "UserPool2"
 }
 ```
 
@@ -188,8 +188,8 @@ _Validates User Session_
 
 ```
 Model : {
-  "accessToken"    : "eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYW...",
-  "type"       		: "UserPool2" -- optional
+  "accessToken": "eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYW...",
+  "type"       : "UserPool2"
 }
 ```
 
